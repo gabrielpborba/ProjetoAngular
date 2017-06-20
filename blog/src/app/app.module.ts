@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ContatoComponent } from './contato/contato.component';
 
 import {ReactiveFormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,7 @@ import {ReactiveFormsModule} from '@angular/forms';
     ContatoComponent
   ],
   imports: [
-    BrowserModule, ReactiveFormsModule
+    BrowserModule, ReactiveFormsModule, HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

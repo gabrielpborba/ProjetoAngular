@@ -1,9 +1,16 @@
 <section id="contato" class="row">
   <div class="col-sm-12">
     <div class="card-block">
+      <div *ngFor="let err of listaErros;">
+          <div class="alert alert-danger">{{err.texto}}</div>
+      </div>
+      <div *ngFor="let err of listaResultado;">
+          <div [ngClass]="{'alert-success':err.sucesso, 'alert-danger': !err.sucesso}" class="alert">{{err.texto}}</div>
+      </div>
       <h1 class="card-title">Contato</h1>
       <p class="card-text">Nunc porta sit amet ligula eget dapibus. Aenean maximus sit amet odio nec scelerisque. Pellentesque vitae purus eget arcu consectetur ornare. Mauris mollis condimentum  </p>
       <form [formGroup]="contatoForm" (ngSubmit)="onSubmit()">
+        
         <div class="form-group">
           <input type="text" class="form-control" formControlName="nome" placeholder="nome" required>
         </div>
@@ -14,7 +21,11 @@
           <textarea class="form-control" formControlName="texto" rows="3" placeholder="deixe um comentário"
                 required minlength="5" maxlength="100"></textarea>
         </div>
+        
         <button type="submit" class="btn btn-primary">Submit</button>
+        
+        
+      
       </form>
     </div>
   </div>
