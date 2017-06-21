@@ -49,6 +49,7 @@ export class ContatoComponent implements OnInit {
     }
   }
   onSubmit(){
+    debugger;
     if(this.contatoForm.valid){
       let headers = new Headers(
         {'Content-Type':'application/json'});
