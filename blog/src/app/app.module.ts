@@ -7,12 +7,14 @@ import { ContatoComponent } from './contato/contato.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import { HomeComponent } from './home/home.component';
+import { ArtigoComponent } from './artigo/artigo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContatoComponent,
-    HomeComponent
+    HomeComponent,
+    ArtigoComponent
   ],
   imports: [
     BrowserModule, ReactiveFormsModule, HttpModule
