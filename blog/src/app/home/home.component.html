@@ -1,0 +1,22 @@
+<div class="col-md-8 offset-md-4" id="conteudo">
+      <article id="sobre-mim" class="row">
+        <div class="col-md-12">
+          <h1>Sobre mim</h1>
+          <div>orem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies lacus vitae porta congue. Nunc rhoncus lacus tellus, sed condimentum nibh convallis vitae. Vivamus neque urna, tempor sed enim et, cursus rutrum augue. Suspendisse a lacinia diam. Nulla aliquet nulla a vehicula finibus. Sed mattis eleifend arcu ut commodo. Etiam ut consequat mi.
+          </div>
+        </div>
+      </article>
+      <section id="artigos" class="row">
+        <div class="col-md-6" *ngFor="let artigo of artigos">
+           <div class="p-3"></div>
+            <article class="card artigo">
+              <div class="card-block">
+                <h2 class="card-title">{{artigo.titulo}}</h2>
+                <p class="card-text">{{artigo.resumo}}</p>
+                <a class="btn btn-primary" [routerLink]="['/artigo',artigo.id]">ler mais</a>
+              </div>
+            </article>
+        </div>
+      </section>
+      <app-contato></app-contato>
+    </div>
