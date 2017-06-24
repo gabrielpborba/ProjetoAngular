@@ -1,3 +1,7 @@
-<p>
-  artigo works!
-</p>
+<article id="artigo" class="row">
+  <div class="col-md-12">
+    <h1>{{artigo.titulo}}</h1>
+    <h6>{{artigo.resumo}}</h6>
+    <div [innerHtml]="html"></div>
+  </div>
+</article>
